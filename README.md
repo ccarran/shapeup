@@ -1,2 +1,2 @@
 # shapeup
-Shape Up Websiet
+Shape Up Website

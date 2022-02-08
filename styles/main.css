@@ -1,14 +1,34 @@
+* {
+    box-sizing: border-box;
+  }
+
+html {
+    background-color: lightsteelblue;
+}
+
+h1, h2, h3, p, blockquote {
+    margin-bottom: 12px;
+}
+
 body {
     font-family: Arial, Helvetica, sans-serif;
+    background-color: white;
     font-size: 100%;
+    max-width: 1000px;
+    width: 100%;
+    box-shadow: 5px 10px 20px 7px black;
+    margin: 0 auto;
+    border: 4px solid steelblue;
+}
+
+header {
+    background-image: linear-gradient(white, lightsteelblue);
+    border-bottom: solid steelblue;
 }
 
 header img {
     float: left;
-}
-
-header {
-    text-indent: 50px;
+    margin-right: 15px;
 }
 
 header h2 {
@@ -18,7 +38,9 @@ header h2 {
     text-shadow: 5px 5px 12px;
 }
 
-p
+main {
+    padding: 0 2em;
+}
 
 h3 {
     font-size: 150%;
@@ -42,9 +64,13 @@ aside a:hover, aside a:active {
 
 ul{
     line-height: 25px;
+    font-weight: bold;
 }
 
 footer {
+    background-color: steelblue;
+    color: white;
     font-size:85%;
     text-align: center;
+    padding: 2px;
 }

@@ -1,0 +1,231 @@
+/* Universal selector */
+* {
+    margin: 0;
+    padding: 0;
+    box-sizing: border-box;  
+}
+
+html {
+    background-color: lightsteelblue;
+    background-image: url('../images/bgtile.jpg');
+}
+
+body {
+    font-family: Arial, Helvetica, sans-serif;
+    background-color: white;
+    font-size: 100%;
+    max-width: 1200px;
+    width: 100%;
+    box-shadow: 5px 10px 20px 7px black;
+    margin: 0 auto;
+    border: 4px solid steelblue;
+}
+
+header {
+    background-image: linear-gradient(white, lightsteelblue);
+    border-bottom: solid steelblue;
+}
+
+header img {
+    float: left;
+    margin: 0 15px;
+}
+
+header h2 {
+    font-size: 300%;
+    color: steelblue;
+    font-style: italic;
+    text-shadow: 5px 5px 12px;
+    margin-top: 20px;
+}
+
+/* #nav_menu - Horizontal inline navigation menu (deprecated) */
+/* #nav_menu {
+    margin: 0;
+}
+#nav_menu ul {
+    list-style: none;
+    text-align: center;
+    border-bottom: solid 1px steelblue;
+    border-top: solid 1px steelblue;
+    background-color: steelblue;
+    padding: 10px 0 10px 0;
+}
+#nav_menu ul li {
+    display: inline;
+    border-right: 2px solid black;
+    padding: 10px 3em 10px 3em;
+}
+#nav_menu #last {
+    border-right: none;
+}
+#nav_menu ul li a {
+    color: white;
+    display: inline;
+    font-weight: bold;
+    text-decoration: none;
+}
+#nav_menu ul li a:hover {
+    color: red;
+}
+#nav_menu ul li:hover {
+    background-color: lightsteelblue;
+} */
+
+/* #nav_menu - 2 tier menu using block and float */
+#nav_menu {
+    border-bottom: solid 2px steelblue;
+}
+#nav_menu ul {
+    position: relative;
+    margin: 0;
+    padding: 0;
+    list-style: none;
+}
+#nav_menu ul li {
+    float: left;
+    width: 20%;
+}
+#nav_menu ul li a {
+    text-align: center;
+    display: block;
+    padding: .7em 0;
+    background-color: steelblue;
+    font-weight: bold;
+    color: white;
+}
+#nav_menu ul ul {
+    display: none;
+    position: absolute;
+    top: 100%;
+    width: 100%;
+}
+#nav_menu ul ul li {
+    float: none;
+}
+#nav_menu ul li:hover > ul {
+    display: block;
+}
+#nav_menu > ul::after {
+    content: "";
+    clear: both;
+    display: block;
+}
+#nav_menu ul li a:hover, #nav_menu ul li a:focus {
+    background-color: lightsteelblue;
+}
+
+/* Navigation list */
+#nav_list h2 {
+    margin-bottom: 5px;
+    text-align: center;
+}
+#nav_list ul {
+    list-style: none;
+}
+#nav_list ul li {
+    width: 90%;
+    margin: 0 auto .5em;
+}
+#nav_list ul li a {
+    display: block;
+    font-weight: bold;
+    text-decoration: none;
+    background-color: lightsteelblue;
+    padding: .5em 0 .5em .5em;
+    color: black;
+}
+#nav_list ul li a:hover {
+    color: white;
+    background-color: steelblue;
+}
+
+/* Main elements */
+main {
+    padding: 0;
+}
+
+/* aside style */
+aside{
+    width: 30%;
+    padding: 0.5em;
+}
+aside h2 {
+    margin-top: 20px;
+    margin-bottom: 12px;
+    color: maroon;
+}
+aside a:link, aside a:visited {
+    color: steelblue;
+}
+aside a:hover, aside a:active {
+    color: maroon;
+}
+aside li {
+    font-weight: bold;
+    line-height: 25px;
+}
+
+/* main section style */
+section {
+    width: 40%;
+    float: left;
+    padding-top: 10px;
+    padding-right: 20px;
+}
+section a:link, section a:visited {
+    color: maroon;
+}
+section a:hover, marginsection a:active {
+    color: steelblue;
+}
+
+/* left aside style */
+#left_aside {
+    float: left;
+}
+
+/* right aside style */
+#right_aside {
+    float: right;
+}
+
+a {
+    text-decoration: none;
+}
+
+h1, h2, h3, p, blockquote {
+    margin-bottom: 12px;
+}
+main p {
+    margin-top: 16px;
+}
+
+blockquote {
+    font-style: italic;
+    padding: 0.5em;
+    border-left: 3px solid steelblue;
+    background-color: #eeeeee;
+    border-radius: 5px;
+    margin: 16px 16px 12px 40px;
+}
+
+h3 {
+    font-size: 150%;
+    margin-top: 24px;
+    margin-bottom: 12px;
+}
+
+/* Footer style */
+footer {
+    clear: both;
+    background-color: steelblue;
+    padding: 2px 0;
+}
+footer p {
+    color: white;
+    font-size: 85%;
+    font-weight: bold;
+    font-variant: small-caps;
+    text-align: center;
+}

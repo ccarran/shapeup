@@ -2,22 +2,46 @@
 
 <html lang="en">
 <head>
+	<!-- meta tags -->
 	<meta charset="utf-8" />
 	<meta name="description" content="Learn how to correctly shape up your body">
 
+	<!-- Viewport -->
+	<meta name="viewport" content="width=device-width, initial-scale=1.0">
+
 	<!--[if lt IE 9]> <script src="http://html5shim.googlecode.com/svn/trunk/html5.js"></script> <![endif]-->
-	<link rel="stylesheet" href="/styles/normalize.css">
+	<link rel="stylesheet" href="styles/normalize.css">
 	<link rel = "icon" href="images/favicon.ico">
 	<link rel="stylesheet" href="styles/main.css">
 	<title>Shape up</title>
+
+	<!-- Slicknav -->
+	<link rel="stylesheet" href="styles/slicknav.css">
+
+	<!-- jQuery CDN -->
+	<script src="https://ajax.googleapis.com/ajax/libs/jquery/3.5.1/jquery.min.js"></script>
+	
+	<!-- local js slicknav script file -->
+	<script src="js/jquery.slicknav.min.js"></script>
+	
+	<!-- slicknav script -->
+	<script type="text/javascript">
+		$(document).ready(function(){
+			$('#nav_menu').slicknav({prependTo:"#mobilemenu"});
+		});
+		</script>
 </head>
 
 <body>
 	<header>
-		<img src="images/shape_up_logo.png" alt="logo">
-		<h2>Shape up!</h2>
+		<a href="index.html"><img id="logoimage" src="images/shape_up_logo.png" alt="Return to home page" title="Return to home page"></a>
+		<a href="index.html"><h2>Shape up!</h2></a>
 		<h3>Find the best fit for you!</h3>
 	</header>
+
+	<!-- slicknav nav tags -->
+	<nav id="mobilemenu"></nav>
+	
 	<nav id="nav_menu">
 		<ul>
 			<li><a href="index.html">Home</a></li>

@@ -8,6 +8,7 @@
 html {
     background-color: lightsteelblue;
     background-image: url('../images/bgtile.jpg');
+    background-attachment: fixed;
 }
 
 body {
@@ -74,6 +75,7 @@ header h2 {
     list-style: none;
     position: absolute;
     top: 100%;
+    box-shadow: 7px 7px 15px -1px gray;
 }
 .container ul li {
     flex-direction: column;
@@ -149,6 +151,26 @@ section a:link, section a:visited {
 section a:hover, marginsection a:active {
     color: steelblue;
 }
+section p {
+    margin: 0 2em 1.5em;
+}
+section h3 {
+    margin-bottom: 5px;
+}
+section h3::after {
+    clear: both;
+}
+.under_construction {
+    display: block;
+    margin: 3em auto;
+    width: 30%;
+} 
+
+.icon {
+    float: left;
+    margin-right: .5em;
+    max-width: 25px;
+}
 
 /* left aside style */
 #left_aside {
@@ -158,6 +180,16 @@ section a:hover, marginsection a:active {
 /* right aside style */
 #right_aside {
     float: right;
+}
+
+article {
+    display: flex;
+    flex-direction: column;
+}
+article > img {
+    margin: 1em 2em;
+    border-radius: 5px;
+    box-shadow: 2px 2px 3px 3px darkslategray;
 }
 
 a {
@@ -190,15 +222,13 @@ blockquote {
 
 h3 {
     font-size: 150%;
-    margin-top: 24px;
-    margin-bottom: 12px;
 }
 
 /* Footer style */
 footer {
     clear: both;
     background-color: steelblue;
-    padding: 2px 0;
+    padding: 1% 0;
 }
 footer p {
     color: white;
@@ -206,6 +236,7 @@ footer p {
     font-weight: bold;
     font-variant: small-caps;
     text-align: center;
+    margin: 0;
 }
 
 /* Hide the mobile menu */
@@ -215,9 +246,13 @@ footer p {
 
 /* Media Queries */
 @media only screen and (max-width: 900px) {
+    html {
+        background-image: none;
+    }
     body {
-      box-shadow: none;
-      font-size: 90%;
+        border: none;
+        box-shadow: none;
+        font-size: 90%;
     }
     #left_aside {
         display: none;

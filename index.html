@@ -29,12 +29,12 @@
 		$(document).ready(function(){
 			$('#nav_menu').slicknav({prependTo:"#mobilemenu"});
 		});
-		</script>
+	</script>
 </head>
 
 <body>
 	<header>
-		<a href="index.html"><img id="logoimage" src="images/shape_up_logo.png" alt="Return to home page" title="Return to home page"></a>
+		<a href="index.html"><img id="logoimage" src="images/shape_up_logo.png" alt="Return to home page" title="Return to homepage"></a>
 		<a href="index.html"><h2>Shape up!</h2></a>
 		<h3>Find the best fit for you!</h3>
 	</header>
@@ -78,6 +78,11 @@
 					<li><a href="https://www.nytimes.com/guides/well/beginner-yoga" target="_blank">Yoga workout</a></li>
 				</ul>
 			</nav>
+			<article>
+				<img src="images/break.jpg">
+				<img src="images/exercise.jpg">
+				<img src="images/meditate.jpg">
+			</article>
 		</aside>
 
 		<section>
@@ -87,15 +92,20 @@
 			<blockquote>Fitness is about so much more than exercise. It’s a catalyst for positive change, and it affects every aspect of your life.</blockquote>
 
 			<h3>What we offer</h3>
+
+			<img src="images/weightlifting.png" class="icon">
 			<h3><a href="strength/index.html">Build strong muscles</a></h3>
 			<p>Tired of being tired? Strength training can help you manage or lose weight and increase your metabolism to help you burn more calories. It can also increase bone density and reduce the risk of osteoporosis.</p>
 
+			<img src="images/cyclist.png" class="icon">
 			<h3><a href="cardio/index.html">Get your heart rate up</a></h3>
 			<p>Want to lose weight? Cardiovascular exercise burns calories and improves overall health. It can reduce belly fat, promote brain growth, prevent stress, and help you focus.</p>
 
+			<img src="images/lotus-position.png" class="icon">
 			<h3><a href="stress/index.html">Relax</a></h3>
 			<p>Stressed out? Stress can weaken the immune system and cause high blood pressure, fatigue, depression, anxiety, and even heart disease. Learn ways to manage and reduce stress.</p>
 
+			<img src="images/vegetables.png" class="icon">
 			<h3><a href="diet/index.html">Eat what's right for you</a></h3>
 			<p>Are you really what you eat? Lose weight, gain weight, or just feel great! Maintaining a healthy diet is probably the most important thing you can do to promote overall health.</p>
 		</section>
@@ -117,8 +127,16 @@
 		</aside>
 	</main>
 
+	<!-- Javascript - Get Current Year for the Footer -->
+	<script>
+		window.onload = function() {
+			var d = new Date();
+			document.getElementById("copyright").innerHTML = d.getFullYear();
+		}
+	</script>
+
 	<footer>
-		<p>&#169; 2022 Shape Up!</p>
+		<p>&#169; <span id="copyright"></span> Shape Up!</p>
 	</footer>
 </body>
 </html>
